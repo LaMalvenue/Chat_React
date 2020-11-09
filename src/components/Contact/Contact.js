@@ -2,11 +2,11 @@ import React from "react";
 import "./Contact.css";
 import PropTypes from 'prop-types';
 
-function Contact({name, image, online}) {
+function Contact({name, avatar, online}) {
     return (
         <div>
             <div className="Contact">
-                <img className="avatar" src={image}/>
+                <img className="avatar" src={avatar} alt={name}/>
                 <div>
                     <p className="name">{name}</p>
                     <div className="status">
@@ -20,7 +20,7 @@ function Contact({name, image, online}) {
 }
 Contact.propTypes = {
     name: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
     online: PropTypes.bool
 };
 export default Contact;
